@@ -1,7 +1,8 @@
+// requiring the default models from sequelize
 const { Model, DataTypes } = require('sequelize');
-
+// requiring the connection file in config
 const sequelize = require('../config/connection.js');
-
+// making a tag table
 class Tag extends Model {}
 
 Tag.init(
@@ -24,5 +25,5 @@ Tag.init(
     modelName: 'tag',
   }
 );
-
+// exporting the tag table
 module.exports = Tag;

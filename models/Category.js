@@ -1,7 +1,8 @@
+// requiring the default models from sequelize
 const { Model, DataTypes } = require('sequelize');
-
+// requiring the connection file in config
 const sequelize = require('../config/connection.js');
-
+// making a category table
 class Category extends Model {}
 
 Category.init(
@@ -25,5 +26,5 @@ Category.init(
     modelName: 'category',
   }
 );
-
+// exporting category table
 module.exports = Category;
